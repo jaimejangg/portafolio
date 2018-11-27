@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #757575;
+}
+
+.informacion {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 190px;
+  font-family: 'Lora', serif;
+  background-color: transparent;
+}
+
+.informacion h1 {
+  margin-bottom: 10px;
+}
+
+.informacion h1:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.subtitulo {
+  margin: 0;
+  cursor: pointer;
+}
+
+.redes {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 50px;
+  margin-top: 12px;
+}
+
+.facebook-icon {
+  color: #757575;
+}
+
+.facebook-icon:hover {
+  color: white;
+}
+
+.github-icon {
+  color: #757575;
+}
+
+.github-icon:hover {
+  color: white;
+}
+
+.instagram-icon {
+  color: #757575;
+}
+
+.instagram-icon:hover {
+  color: white;
+}
