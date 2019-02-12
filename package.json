@@ -2,17 +2,22 @@
   "name": "portafolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jaimejangg.github.io/portafolio",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-icons": "^3.2.2",
-    "react-particles-js": "^2.4.2",
+    "react-particles-js": "^2.4.0",
+    "react-responsive-modal": "^3.6.0",
     "react-scripts": "2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

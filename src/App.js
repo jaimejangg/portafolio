@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";  
+import { FaInstagram } from "react-icons/fa";
+import Modal from 'react-responsive-modal';
 import './App.css';
 
 const params = {
@@ -17,7 +18,7 @@ const params = {
           "value": 3,
           "random": true,
           "anim": {
-              "speed": 4,
+              "speed": 6,
               "size_min": 0.3
           }
       },
@@ -50,15 +51,29 @@ const params = {
               "opacity": 0
           },
           "repulse": {
-              "distance": 400,
-              "duration": 4
+              "distance": 200,
+              "duration": 3
           }
       }
   }
 }
 
 class App extends Component {
+
+  state = {
+    open: false,
+  };
+
+  onOpenModal = () => {
+    this.setState({ open: true });
+  };
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
+
   render() {
+    const { open } = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -69,9 +84,37 @@ class App extends Component {
             className="particles"
           />
           <div className='informacion'>
-            <h1>
-              Jaime Jangg
-            </h1>
+            <h1 onClick={this.onOpenModal}>Jaime Jangg</h1>
+            <Modal 
+              open={open} 
+              onClose={this.onCloseModal} 
+              center
+              >
+              <h2>Hola soy Jaime Jangg te cuento un poco de mi</h2>
+              <p>
+                🇲🇽
+                Soy una persona apasionada por la innovacion, desde pequeño me ha
+                gustado crear cosas para mejorar a las personas y sociedades
+                interesado por el comportamiento de las sociedades fue que estudie
+                una Licenciatura en Negocios Internacionales y una especialidad en
+                Desarrollo de Software lo cual me ha permitido crear lo que pienso
+                con creatividad e innovacion, contactame para trabajar en tu proyecto
+                increible contigo.
+                <br></br>
+                <br></br>
+                🇺🇸
+                I am a passionate person for innovation, since I was a child
+                liked to create things to improve people and societies
+                interested in the behavior of the societies was that I studied
+                a Bachelor of International Business and a specialty in
+                Software development which has allowed me to create what I think
+                With creativity and innovation, contact me to work on your incredible
+                project with you.
+                <br/>
+                <br/>
+                with ❤️ Jaime Jangg.
+              </p>
+            </Modal>
             <h4 className='subtitulo'>
               Business Innovator 
             </h4>
